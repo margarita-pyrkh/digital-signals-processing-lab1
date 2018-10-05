@@ -18,28 +18,28 @@ const CONTEXT_CHART_5 = document.getElementById("chart-5").getContext("2d");
 
 const defaultMatrix = [
   {
-    A: 3,
+    A: 6,
     f: 1,
-    angle: Math.PI / 4
+    angle: Math.PI / 6
   },
   {
-    A: 3,
+    A: 6,
     f: 2,
-    angle: (3 * Math.PI) / 4
+    angle: Math.PI / 2
   },
   {
-    A: 3,
+    A: 6,
     f: 3,
-    angle: (2 * Math.PI) / 3
+    angle: Math.PI / 3
   },
   {
-    A: 3,
+    A: 6,
     f: 4,
-    angle: Math.PI / 2
+    angle: Math.PI / 9
   },
   {
-    A: 3,
+    A: 6,
     f: 5,
-    angle: Math.PI / 2
+    angle: 0
   }
 ];
