@@ -8,6 +8,8 @@ const CHART_COLORS = {
   grey: "rgb(201, 203, 207)"
 };
 
+const N_ARRAY = [...Array(512).keys()];
+
 const CONTEXT_CHART_1 = document.getElementById("chart-1").getContext("2d");
 const CONTEXT_CHART_2 = document.getElementById("chart-2").getContext("2d");
 const CONTEXT_CHART_3 = document.getElementById("chart-3").getContext("2d");

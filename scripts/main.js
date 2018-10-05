@@ -2,7 +2,6 @@
 const firstChart = () => {
   const A = 6;
   const F = 3;
-  const N_ARRAY = [...Array(512).keys()];
 
   const CHART_1 = new Chart(CONTEXT_CHART_1, {
       type: 'line',
@@ -68,8 +67,94 @@ const firstChart = () => {
   });
 };
 
+firstPolyharmonicalChart = () => {
+  const CHART_4 = new Chart(CONTEXT_CHART_4, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'polyharmonical signal',
+            fill: false,
+            pointStyle: 'line',
+            backgroundColor: CHART_COLORS.red,
+            borderColor: CHART_COLORS.red,
+            data: N_ARRAY.map(n => polyharmonicalSignal(n))
+        }],
+        labels: N_ARRAY,
+    },
+    options: {
+        responsive: true,
+        title:{
+            display: true,
+            text:'Polyharmonical signal'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                    suggestedMin: -5,
+                    suggestedMax: 5
+                },
+                display: true,
+                scaleLabel: {
+                    display: true
+                }
+            }]
+        }
+    }
+});
+};
+
+secondPolyharmonicalChart = () => {
+  const CHART_5 = new Chart(CONTEXT_CHART_5, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'polyharmonical signal',
+            fill: false,
+            pointStyle: 'line',
+            backgroundColor: CHART_COLORS.red,
+            borderColor: CHART_COLORS.red,
+            data: polyharmonicalSignalLinear(N_ARRAY)
+        }],
+        labels: N_ARRAY
+    },
+    options: {
+        responsive: true,
+        title:{
+            display: true,
+            text: 'Polyharmonical signal'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                    suggestedMin: -5,
+                    suggestedMax: 5
+                },
+                display: true,
+                scaleLabel: {
+                    display: true
+                }
+            }]
+        }
+    }
+});
+};
+
 const main = () => {
   firstChart();
+  firstPolyharmonicalChart();
+  secondPolyharmonicalChart();
 };
 
 main();
